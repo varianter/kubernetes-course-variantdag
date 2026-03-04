@@ -54,6 +54,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: nginx-hello-world
+            name: nginx-hello-world-svc
             port:
               number: 80
