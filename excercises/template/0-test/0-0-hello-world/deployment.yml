@@ -38,8 +38,14 @@ metadata:
   name: nginx-hello-world-ing
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt-lab
+
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - template.course.variant.dev
+    secretName: nginx-hello-world-tls
   rules:
   - host: template.course.variant.dev
     http:
