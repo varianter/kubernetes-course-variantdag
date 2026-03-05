@@ -36,6 +36,10 @@ resource "kubectl_manifest" "argocd_app_of_apps_lab" {
             repoURL        = local.github_repo_url
             targetRevision = "HEAD"
             path           = "{{.path.path}}"
+            directory = {
+              include = "*.{yml,yaml}"
+              exclude = "src/**"
+            }
           }
           destination = {
             server    = "https://kubernetes.default.svc"
