@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginxdemos/hello:plain-text
+        image: variantcourselabsacr.azurecr.io/excercises-cbrevik-0-test-0-1-first-excercise:737a10bb250dcdb31d60d593b0de2b9a088d55c6
         ports:
         - containerPort: 80
 ---
