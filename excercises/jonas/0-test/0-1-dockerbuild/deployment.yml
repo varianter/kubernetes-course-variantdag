@@ -19,6 +19,7 @@ spec:
         image: variantcourselabsacr.azurecr.io/excercises-jonas-0-test-0-1-dockerbuild:162278848f10c931380e274a80fdd1f3c0b70b55
         ports:
         - containerPort: 80
+        - targetPort: 8080
 ---
 apiVersion: v1
 kind: Service
