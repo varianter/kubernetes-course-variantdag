@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: variantcourselabsacr.azurecr.io/excercises-jonas-0-test-0-1-dockerbuild:3588606d499a39009650dd34546c977273858aed
+        image: variantcourselabsacr.azurecr.io/excercises-jonas-0-test-0-1-dockerbuild:8f0053b4409ec0fdd9dffff69a621200193d2a14
         ports:
         - containerPort: 8080
 ---
