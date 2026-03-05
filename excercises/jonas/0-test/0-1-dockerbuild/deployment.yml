@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-hello-world
+  name: nginx-hello-acr
   labels:
-    app: nginx-hello-world
+    app: nginx-hello-acr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-hello-world
+      app: nginx-hello-acr
   template:
     metadata:
       labels:
-        app: nginx-hello-world
+        app: nginx-hello-acr
     spec:
       containers:
       - name: nginx
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-hello-world-svc
+  name: nginx-hello-acr-svc
 spec:
   selector:
-    app: nginx-hello-world
+    app: nginx-hello-acr
   ports:
     - protocol: TCP
       port: 80
@@ -35,7 +35,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-hello-world-ing
+  name: nginx-hello-acr-ing
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt-lab
@@ -45,15 +45,15 @@ spec:
   tls:
   - hosts:
     - template.course.variant.dev
-    secretName: nginx-hello-world-tls
+    secretName: nginx-hello-acr-tls
   rules:
-  # - host: <yoursubdomain>.course.variant.dev
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: nginx-hello-world-svc
-            port:
-              number: 80
+    - host: jonas-docker.course.variant.dev
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: nginx-hello-acr-svc
+              port:
+                number: 80
