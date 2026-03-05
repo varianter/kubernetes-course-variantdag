@@ -17,6 +17,8 @@ var machineName = Environment.MachineName;
 
 var isHealthy = true;
 
+app.MapGet("/", () => "Hello world! :) Fra Christian");
+
 app.MapGet("/info", () =>
     {
         if (isHealthy)
