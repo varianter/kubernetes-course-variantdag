@@ -33,9 +33,11 @@ jobs:
           dir_names: true
           dir_names_max_depth: 4
           files: |
-            **/Dockerfile
+            excercises/**
           files_ignore: |
             **/_*/**
+            **/deployment.yml
+
           json: true
           escape_json: false
 
