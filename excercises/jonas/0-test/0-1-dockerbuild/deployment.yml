@@ -44,7 +44,7 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - template.course.variant.dev
+    - jonas-docker.course.variant.dev
     secretName: nginx-hello-acr-tls
   rules:
     - host: jonas-docker.course.variant.dev
