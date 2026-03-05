@@ -45,7 +45,7 @@ spec:
   tls:
   - hosts:
     - cbrevik-docker.course.variant.dev
-    secretName: my-app-tls
+    secretName: nginx-hello-acr-tls
   rules:
     - host: cbrevik-docker.course.variant.dev
       http:
