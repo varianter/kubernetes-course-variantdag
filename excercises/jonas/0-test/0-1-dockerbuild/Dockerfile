@@ -6,6 +6,7 @@ WORKDIR /src
 COPY simple-api.csproj .
 RUN dotnet restore -a $TARGETARCH
 # copy and publish app and libraries
+
 COPY . .
 RUN dotnet publish -a $TARGETARCH -c Release --no-restore -o /app
 # final stage and image
