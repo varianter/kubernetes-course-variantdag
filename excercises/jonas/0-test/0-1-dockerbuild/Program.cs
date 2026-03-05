@@ -16,7 +16,7 @@ var favoriteLunch = Environment.GetEnvironmentVariable("FAV_LUNCH");
 var machineName = Environment.MachineName;
 
 var isHealthy = true;
-// Some code change
+
 app.MapGet("/", () => "Hello world! :)");
 
 app.MapGet("/info", () =>
