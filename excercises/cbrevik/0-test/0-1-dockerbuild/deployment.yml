@@ -44,10 +44,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - #Your hostname here! must end in .course.variant.dev
+    - cbrevik-docker.course.variant.dev
     secretName: my-app-tls
   rules:
-    - host: #Your hostname here! must end in .course.variant.dev
+    - host: cbrevik-docker.course.variant.dev
       http:
         paths:
         - path: /
