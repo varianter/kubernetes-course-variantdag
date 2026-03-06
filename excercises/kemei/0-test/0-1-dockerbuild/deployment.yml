@@ -18,7 +18,7 @@ spec:
       - name: nginx
         env:
           - name: FAV_LUNCH
-            value: "Chiiiken"
+            value: "Chiiken"
         image: variantcourselabsacr.azurecr.io/excercises-kemei-0-test-0-1-dockerbuild:059c9cca6a69f1c68c2c72f128d20bfbc87ca850
         ports:
         - containerPort: 80
