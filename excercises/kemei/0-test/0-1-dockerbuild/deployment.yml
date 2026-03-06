@@ -20,8 +20,21 @@ spec:
           - name: FAV_LUNCH
             value: "Chiiken"
         image: variantcourselabsacr.azurecr.io/excercises-kemei-0-test-0-1-dockerbuild:059c9cca6a69f1c68c2c72f128d20bfbc87ca850
+        livenessProbe:
+          httpGet:
+            port: 80
+            path: "/heahlt"
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            port: 80
+            path: /health"
+          initialDelaySeconds: 10
+          periodSeconds: 10
         ports:
         - containerPort: 80
+
 ---
 apiVersion: v1
 kind: Service
