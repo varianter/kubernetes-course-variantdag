@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
       - name: nginx
+        env:
+          - name: FAV_LUNCH
+            value: "Chiiken"
         image: variantcourselabsacr.azurecr.io/excercises-kemei-0-test-0-1-dockerbuild:059c9cca6a69f1c68c2c72f128d20bfbc87ca850
         ports:
         - containerPort: 80
@@ -30,7 +33,6 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
