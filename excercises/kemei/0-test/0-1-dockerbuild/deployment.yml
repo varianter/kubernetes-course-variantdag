@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: variantcourselabsacr.azurecr.io/excercises-kemei-0-test-0-1-dockerbuild:64649c6143b1ba96307151f7004dac82726404a1
+        image: variantcourselabsacr.azurecr.io/excercises-kemei-0-test-0-1-dockerbuild:56d571be705b7fa243ff5ce34c44d196d59ea714
         ports:
         - containerPort: 80
 ---
