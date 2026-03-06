@@ -44,10 +44,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - #Your hostname here! must end in .course.variant.dev
+    - ka9n.course.variant.dev #Your hostname here! must end in .course.variant.dev
     secretName: my-app-tls
   rules:
-    - host: #Your hostname here! must end in .course.variant.dev
+    - host: ka9n.course.variant.dev #Your hostname here! must end in .course.variant.dev
       http:
         paths:
         - path: /
