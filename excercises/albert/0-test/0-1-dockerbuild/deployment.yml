@@ -18,7 +18,7 @@ spec:
       - name: nginx
         image: variantcourselabsacr.azurecr.io/excercises-albert-0-test-0-1-dockerbuild:16f9437097ec4c403fe07e626f404a31fd70cd08
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         env:
         - name: FAV_LUNCH
           value: "pizza"
@@ -33,7 +33,6 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress

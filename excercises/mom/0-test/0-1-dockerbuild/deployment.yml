@@ -16,12 +16,9 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: variantcourselabsacr.azurecr.io/excercises-morten-0-test-0-1-dockerbuild:4516e031e3c48d2e6a21380e673d427634ed0c4b
+        image: variantcourselabsacr.azurecr.io/excercises-mom-0-test-0-1-dockerbuild:103840a7119d56e6538d8e2b87a0b2fd3129aefb
         ports:
-        - containerPort: 8080
-        env:
-        - name: FAV_LUNCH
-          value: "Pizza"
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -47,10 +44,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - morten.course.variant.dev
+    - #Your hostname here! must end in .course.variant.dev
     secretName: my-app-tls
   rules:
-    - host: morten.course.variant.dev
+    - host: #Your hostname here! must end in .course.variant.dev
       http:
         paths:
         - path: /

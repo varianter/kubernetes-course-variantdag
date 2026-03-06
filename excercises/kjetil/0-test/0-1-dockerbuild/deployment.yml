@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: variantcourselabsacr.azurecr.io/excercises-kjetil-0-test-0-1-dockerbuild:a2bcb9b14aa9cbc8de456914eef25d8ea305e9ba
+          image: variantcourselabsacr.azurecr.io/excercises-kjetil-0-test-0-1-dockerbuild:6beb162a1303b75bd659a07539ee5e116abb1078
           ports:
             - containerPort: 80
           env:
