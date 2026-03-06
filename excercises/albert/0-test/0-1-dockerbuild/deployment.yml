@@ -18,7 +18,10 @@ spec:
       - name: nginx
         image: variantcourselabsacr.azurecr.io/excercises-albert-0-test-0-1-dockerbuild:16f9437097ec4c403fe07e626f404a31fd70cd08
         ports:
-        - containerPort: 80
+        - containerPort: 8080
+        env:
+        - name: FAV_LUNCH
+          value: "pizza"
 ---
 apiVersion: v1
 kind: Service
