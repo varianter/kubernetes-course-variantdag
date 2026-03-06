@@ -18,7 +18,7 @@ spec:
       - name: nginx
         image: variantcourselabsacr.azurecr.io/excercises-morten-0-1-dockerbuild:ae1a4f2a52a6953d1b706d667310c670b43efd8a
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
