@@ -12,6 +12,6 @@ RUN dotnet publish -a $TARGETARCH -c Release --no-restore -o /app
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine
 WORKDIR /app
 COPY --from=build /app .
-ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_URLS=http://+:80
 ENTRYPOINT ["dotnet", "simple-api.dll"]
-EXPOSE 8080
+EXPOSE 80
