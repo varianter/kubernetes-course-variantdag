@@ -13,14 +13,9 @@ app.UseHttpsRedirection();
 
 // This isn't how you usually do this in .NET. See options-patterns instead. 
 var favoriteLunch = Environment.GetEnvironmentVariable("FAV_LUNCH");
-if(string.IsNullOrEmpty(favoriteLunch))
-    throw new Exception("Missing configuration favorriteLunch");
-
 var machineName = Environment.MachineName;
 
 var isHealthy = true;
-
-app.MapGet("/", () => "Hello world!");
 
 app.MapGet("/info", () =>
     {
@@ -42,7 +37,7 @@ app.MapGet("/info", () =>
 app.MapPost("/experimental", () =>
 {
     isHealthy = false;
-    return "I think this went OK";
+    return "I think this went OK NOT";
 }).WithName("BETA: Experimental feature")
 .WithOpenApi();
 
