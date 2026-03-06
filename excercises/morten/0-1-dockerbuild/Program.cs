@@ -37,7 +37,7 @@ app.MapGet("/info", () =>
 app.MapPost("/experimental", () =>
 {
     isHealthy = false;
-    return "I think this went OK";
+    return "I think this went OK NOT";
 }).WithName("BETA: Experimental feature")
 .WithOpenApi();
 
