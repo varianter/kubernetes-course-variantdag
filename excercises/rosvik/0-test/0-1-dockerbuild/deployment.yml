@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: variantcourselabsacr.azurecr.io/excercises-rosvik-0-test-0-1-dockerbuild:e95560016df8ff6e236dbb366fdc3a1cb04f267d
+        image: variantcourselabsacr.azurecr.io/excercises-rosvik-0-test-0-1-dockerbuild:76103d1c19ea9027fa4116cc0a16d8054e6693f2
         ports:
         - containerPort: 80
 ---
