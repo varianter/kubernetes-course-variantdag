@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginxdemos/hello:plain-text
+        image: variantcourselabsacr.azurecr.io/excercises-mom-0-test-0-1-dockerbuild:103840a7119d56e6538d8e2b87a0b2fd3129aefb
         ports:
         - containerPort: 80
 ---
