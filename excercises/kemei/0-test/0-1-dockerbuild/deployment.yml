@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginxdemos/hello:plain-text
+        image: variantcourselabsacr.azurecr.io/excercises-kemei-0-test-0-1-dockerbuild:64649c6143b1ba96307151f7004dac82726404a1
         ports:
         - containerPort: 80
 ---
