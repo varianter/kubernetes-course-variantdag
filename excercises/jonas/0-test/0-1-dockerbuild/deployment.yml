@@ -26,6 +26,10 @@ spec:
           httpGet:
             path: /health
             port: 8080
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
 
 ---
 apiVersion: v1
