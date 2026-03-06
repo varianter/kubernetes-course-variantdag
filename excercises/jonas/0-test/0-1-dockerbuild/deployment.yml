@@ -19,6 +19,9 @@ spec:
         image: variantcourselabsacr.azurecr.io/excercises-jonas-0-test-0-1-dockerbuild:05f1469e1b6d08a9fbf4d13c35ce3d378e722dca
         ports:
         - containerPort: 8080
+        env:
+         - name: FAV_LUNCH
+           value: "pizza"
         readinessProbe:
           httpGet:
             path: /health
